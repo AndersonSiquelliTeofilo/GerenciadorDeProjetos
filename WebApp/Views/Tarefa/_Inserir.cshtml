@@ -1,0 +1,30 @@
+﻿@model Tarefa
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 id="btn-modal-label" class="modal-title">Nova tarefa</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <form asp-action="Inserir" method="post">
+        <div class="modal-body">
+            <div class="form-row">
+                <div class="col-sm-4">
+                    <label asp-for="Id">Id</label>
+                    <input asp-for="Id" class="form-control" placeholder="Id" />
+                </div>
+                <div class="col-sm-8">
+                    @*<label asp-for="Descricao">Descrição</label>
+                    <input asp-for="Descricao" class="form-control" placeholder="Descrição" />*@
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+    </form>
+</div>
+
+<partial name="_ValidationScriptsPartial" />
